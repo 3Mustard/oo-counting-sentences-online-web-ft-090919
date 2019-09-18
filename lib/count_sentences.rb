@@ -16,7 +16,7 @@ class String
 
   def count_sentences
     array = self.split(/[!.?]/)
-    array.delete_if {|sentence| sentence}
+    array.delete_if {|sentence| sentence[0] == sentence.include?(/[!.?]/)}
     count = array.length
   end
 end
