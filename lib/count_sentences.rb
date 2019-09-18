@@ -15,8 +15,6 @@ class String
   end
 
   def count_sentences
-    array.split(/[.!?]/).reject {|x| x =}
-    binding.pry
-    count = array.length
+    array.split(/[.!?]/).reject {|x| x.empty?}.length
   end
 end
